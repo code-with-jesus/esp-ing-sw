@@ -1,0 +1,62 @@
+%\documentclass[12pt,letterpaper,pagesize,oneside]{scrbook}
+\documentclass[12pt,fleqn,openany,a4paper,pagesize]{scrbook}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{hyperref}
+
+\graphicspath{ {images/} }
+\hypersetup{colorlinks, linkcolor=black}
+\renewcommand{\baselinestretch}{1.25}
+\oddsidemargin0.5cm \evensidemargin-0.5cm%
+
+\textheight22.5cm \topmargin0cm \textwidth16.5cm
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\renewcommand{\chapterpagestyle}{empty}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\leftmark}}
+\rhead[\fancyplain{}{\leftmark}]{\fancyplain{}{\thepage}}
+
+\begin{document}
+
+\cleardoublepage
+\pagenumbering{roman}
+
+\input{cover/cover}
+\input{cover/acknowledgments}
+\input{cover/abstract}
+
+\cleardoublepage
+\tableofcontents
+
+\cleardoublepage
+\listoffigures
+
+\cleardoublepage
+\listoftables
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\input{chapters/chapter01}
+\input{chapters/chapter02}
+\input{chapters/chapter03}
+\input{chapters/chapter04}
+\input{chapters/conclusion}
+
+\appendix
+\input{appendix/appendix01}
+\input{appendix/appendix02}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}

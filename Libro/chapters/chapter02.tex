@@ -1,0 +1,22 @@
+\chapter{A Review of Data Stream Clustering}
+
+Data Stream clustering has been an attractive research field in the last years due its several applications in different contexts like network traffic analysis, log record analysis, online anomaly detection ...
+
+
+\section{Previous work}
+
+
+Clustering without proper feature selection may not produce desirable data clusters.
+PCA is a technique to represent the data capturing its maximum variant dimensions 
+A set of basis vectors that are the dominant eigenvectors of the covariance matrix
+
+\cite{blackholes}
+Traditional clustering algorithms  are based on 
+is applied to optimize problem by minimizing certain quality metrics such as squared error. The result of clusters is convex shape in d- dimensional space. Therefore, for clustering with arbitrary shape, this strategy does not work properly. We can see arbitrary shape in area of science such as weather satellite, image segmentation spatial data which is collected from geographic information systems (GIS) and even sensor data that is posed as arbitrary shape. These applications generate enormous volume of data. Those set of algorithm which find irregular shaped cluster are called as 'shape-base clustering algorithms' [4].
+
+In this Proposal, our focus is on the arbitrary-shape clustering task. We use the term shape-based clustering for all algorithmic techniques that capture clusters with arbitrary shapes, varying densities and sizes. Various algorithms have been applied for finding Shape-based clustering. These algorithms are categorized into: Hierarchical clustering, prototype-base algorithm, spectral-base clustering, kernel-base method, density-base method and manifold-base clustering.
+
+
+
+Among these algorithms, prototype algorithm can only model cluster with specific shape, therefore cannot be applied for arbitrary shape. In the density method like DBScan, finding appropriate parameters is difficult and this difficulty makes use of these algorithm limited. Spectral algorithm for choosing a good similarity graph is not trivial and can be quite unstable under different choices of the parameters for neighbouring graphs [5]. Kernel-base clustering which has been used for to distinguish non-linear clustering boundaries, closely related to spectral algorithm. Kernel clustering has some major problems; its computational is expensive due to difficulty in scaling large-scale dataset because of the number of parameters is quadric respect to the number of examples. Second, it is sensitive to choose of kernel functions. Third, it needs data pre-processing to ensure that any clustering boundary will pass through the origins which makes it unstable for clustering unbalanced dataset. Spectral, density-based (DBSCAN), and nearest-neighbour graph based (Chameleon) approaches are the most successful among the many shape-based clustering methods. But when they turns to the complexity time and space limitation in data stream, aforementioned algorithms have high computational in comparison to linear distance-base clustering [5].
+Some works have been done in the area of data stream clustering for arbitrary shape clustering. This continues effort has one common goal to achieve and produce an accurate data stream clustering method. Despite these studies still cannot lead the users to obtain correct result.
